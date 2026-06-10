@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# ZMK / Zephyr build output (in case you ever build locally)
+build/
+*.uf2
+*.hex
+*.bin
+zephyr/
+.west/
