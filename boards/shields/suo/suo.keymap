@@ -15,7 +15,7 @@
 						&kp LBRC	&kp UP	&kp SPACE	&kp TAB		&kp C_PP	&kp F3		&kp BSPC	&kp RET	&kp UP	&kp RBRC
 			>;
 			sensor-bindings =
-				<&inc_dec_kp LS(LALT(C_VOL_UP)) LS(LALT(C_VOL_DN))>,
+				<&inc_dec_kp LS(LA(C_VOL_UP)) LS(LA(C_VOL_DN))>,
 				<&inc_dec_kp LC(LEFT) LC(RIGHT)>;
 		};
 	};
