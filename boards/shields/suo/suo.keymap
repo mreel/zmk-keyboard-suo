@@ -1,7 +1,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define RSE	1
+#define WIN	1
+#define RSE	2
+#define RHA	3
 
 &mt {
 	tapping-term-ms = <150>;
@@ -14,9 +16,9 @@
 
 		default_layer { // Layer 0
 			bindings = <
-				&kp ESC	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5			&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp LG(LC(Q))
+				&kp ESC	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5			&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&tog WIN
 						&kp Q	&kp W	&kp E	&kp R	&kp T			&kp Y	&kp U	&kp I	&kp O	&kp P
-&kp LA(BSPC)	&mt LCTRL A	&mt LALT S	&mt LCMD D	&mt LSHFT F	&kp G			&kp H	&mt RSHFT J	&mt RCMD K	&mt RALT L	&mt RCTRL SEMI	&kp DEL
+&kp LA(BSPC)	&mt LCTRL A	&mt LALT S	&mt LCMD D	&mt LSHFT F	&kp G		&kp H	&mt RSHFT J	&mt RCMD K	&mt RALT L	&mt RCTRL SEMI	&kp DEL
 	   &kp LC(LS(LA(LGUI)))	&kp Z	&kp X	&kp C	&kp V	&kp B			&kp N	&kp M	&kp COMMA	&kp DOT	&kp SLASH	&kp APOS
 
 						&kp LBRC	&kp UP	&kp SPACE	&kp TAB		&kp C_PP	&kp F3		&kp BSPC	&kp RET	&mo RSE	&kp RBRC
@@ -26,12 +28,34 @@
 				<&inc_dec_kp LC(LEFT) LC(RIGHT)>;
 		};
 
-		raise_layer { // Layer 0
+		win_layer { // Layer 1
+			bindings = <
+				&trans	&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans	&trans
+						&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans
+&kp LC(BSPC)	&mt LGUI A	&mt LALT S	&mt LCTRL D	&mt LSHFT F	&trans		&trans	&mt RSHFT J	&mt RCTRL K	&mt RALT L	&mt RGUI SEMI	&trans
+	    &kp LC(LS(LALT))	&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans	&trans
+
+						&trans	&mo RHA	&trans	&trans		&trans	&trans		&trans	&trans	&trans	&trans
+			>;
+		};
+
+		raise_layer { // Layer 2
 			bindings = <
 				&trans	&kp F1	&kp F2	&kp F3	&kp F4	&kp F5			&kp F6	&kp F7	&kp F8	&kp F9	&kp F10	&trans
 						&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&kp MINUS	&kp EQUAL
-				&kp GRAVE	&trans	&trans	&trans	&trans	&trans			&kp LEFT	&kp DOWN	&kp UP	&kp RIGHT	&kp BSLH	&kp F11
+				&kp GRAVE	&trans	&kp LG(X)	&kp LG(C)	&kp LG(V)	&trans			&kp LEFT	&kp DOWN	&kp UP	&kp RIGHT	&kp BSLH	&kp F11
 				&trans	&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans	&kp F12
+
+						&trans	&trans	&trans	&trans		&trans	&trans		&trans	&trans	&trans	&trans
+			>;
+		};
+
+		right_hand { // Layer 3
+			bindings = <
+				&trans	&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans	&trans
+						&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans
+				&trans	&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans	&trans
+				&trans	&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans	&trans
 
 						&trans	&trans	&trans	&trans		&trans	&trans		&trans	&trans	&trans	&trans
 			>;
