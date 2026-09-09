@@ -21,7 +21,7 @@
 &kp LA(BSPC)	&mt LCTRL A	&mt LALT S	&mt LCMD D	&mt LSHFT F	&kp G		&kp H	&mt RSHFT J	&mt RCMD K	&mt RALT L	&mt RCTRL SEMI	&kp DEL
 	   &kp LC(LS(LA(LGUI)))	&kp Z	&kp X	&kp C	&kp V	&kp B			&kp N	&kp M	&kp COMMA	&kp DOT	&kp SLASH	&kp APOS
 
-						&kp LBRC	&kp UP	&kp SPACE	&kp TAB		&kp C_PP	&kp F3		&kp BSPC	&kp RET	&mo RSE	&kp RBRC
+						&kp LBKT	&kp UP	&kp SPACE	&kp TAB		&kp C_PP	&kp F3		&kp BSPC	&kp RET	&mo RSE	&kp RBKT
 			>;
 			sensor-bindings =
 				<&inc_dec_kp LS(LA(C_VOL_DN)) LS(LA(C_VOL_UP))>,
