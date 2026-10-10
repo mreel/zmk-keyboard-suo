@@ -8,14 +8,20 @@
 
 # Editors
 .vscode/
+.claude/
 .idea/
 *.swp
 *~
+
 
 # ZMK / Zephyr build output (in case you ever build locally)
 build/
 *.uf2
 *.hex
 *.bin
-zephyr/
+zephyr/*
+!zephyr/module.yml
 .west/
+
+# reference
+qmk sinc mreel/
