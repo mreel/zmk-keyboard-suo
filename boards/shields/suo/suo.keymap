@@ -3,7 +3,7 @@
 
 #define WIN	1
 #define RSE	2
-#define RHA	3
+#define LWR	3
 
 &mt {
 	tapping-term-ms = <150>;
@@ -11,6 +11,16 @@
 };
 
 / {
+
+	combos {
+		compatible = "zmk,combos";
+		combo_caps {
+			timeout-ms = <50>;
+			key-positions = <49 50>;
+			bindings = <&caps_word>;
+		};
+	};
+
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -43,17 +53,17 @@
 			bindings = <
 				&trans	&kp F1	&kp F2	&kp F3	&kp F4	&kp F5			&kp F6	&kp F7	&kp F8	&kp F9	&kp F10	&trans
 						&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&kp MINUS	&kp EQUAL
-				&kp GRAVE	&trans	&kp LG(X)	&kp LG(C)	&kp LG(V)	&trans			&kp LEFT	&kp DOWN	&kp UP	&kp RIGHT	&kp BSLH	&kp F11
+				&kp GRAVE	&trans	&trans	&trans	&trans	&trans			&kp LEFT	&kp DOWN	&kp UP	&kp RIGHT	&kp BSLH	&kp F11
 				&trans	&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans	&kp F12
 
 						&trans	&trans	&trans	&trans		&trans	&trans		&trans	&trans	&trans	&trans
 			>;
 		};
 
-		right_hand { // Layer 3
+		lower_layer { // Layer 3
 			bindings = <
-				&trans	&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans	&trans
-						&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans
+				&trans	&trans	&kp F6	&kp F7	&kp F8	&kp F10			&trans	&trans	&trans	&trans	&trans	&trans
+						&kp LA(1)	&kp LA(2)	&kp LA(3)	&kp LA(4)	&kp LA(5)			&trans	&trans	&trans	&trans	&trans
 				&trans	&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans	&trans
 				&trans	&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans	&trans
 
