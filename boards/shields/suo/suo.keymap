@@ -63,7 +63,7 @@
 		lower_layer { // Layer 3
 			bindings = <
 				&trans	&trans	&kp F6	&kp F7	&kp F8	&kp F10			&trans	&trans	&trans	&trans	&trans	&trans
-						&kp LA(1)	&kp LA(2)	&kp LA(3)	&kp LA(4)	&kp LA(5)			&trans	&trans	&trans	&trans	&trans
+		&kp LA(N1)	&kp LA(N2)	&kp LA(N3)	&kp LA(N4)	&kp LA(N5)		&trans	&trans	&trans	&trans	&trans
 				&trans	&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans	&trans
 				&trans	&trans	&trans	&trans	&trans	&trans			&trans	&trans	&trans	&trans	&trans	&trans
 
